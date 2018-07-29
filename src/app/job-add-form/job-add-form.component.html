@@ -1,0 +1,47 @@
+<div class ="panel-body">
+  <!-- formGroup permet d'afficher le formulaire de type group dans le fichier job-add-form.component.ts
+        ngSubmit est le retour du formulaire lorsque l'utilisateur l'aura encodé voir job-add-component.ts pour voir le traitement de celui-ci dans la fonction createJob-->
+  <form [formGroup]="form"(ngSubmit)="createJob()">
+    <div class="form-group col-sm-6">
+      <label for="title">titre</label>
+      <input type="text"
+              name="title"
+              class="form-control"
+              placeholder="titre de votre annonce"
+              formControlName="title"
+      > <!--formContorlName permet de dire à quoi va correspondre le dansle squelette du formulaire-->
+      <label for="company">entreprise</label>
+      <input type="text"
+              name="company"
+              class="form-control"
+              placeholder="nom de votre entreprise"
+              formControlName="company"
+      >
+      <label for="">city</label>
+      <input type="text"
+              name="Ville"
+              class="form-control"
+              placeholder="Ville du poste de travail"
+              formControlName="city"
+      >
+      <label for="zipcode">code postal</label>
+      <input type="text"
+              name="zipcode"
+              class="form-control"
+              placeholder="code postal"
+              formControlName="zipcode"
+      >
+
+      <div class="form-group col-sm-6">    
+        <label for="description">description</label>
+        <textarea name="description" name="description" cols="30" rows="10" formControlName="description"></textarea>
+      </div>
+
+      <div class="form-group col-sm-12">
+        <button type="submit" class="btn btn-success"> créer l'annonce </button>
+      </div>
+    </div>
+
+  </form>
+
+</div>
