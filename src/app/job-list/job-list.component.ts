@@ -20,6 +20,11 @@ export class JobListComponent implements OnInit {
                     );/*subscribe comprend 3 paramêtre  1. les donné si cela c'est bien passée. 
                                                         2. l'error qui aura été généré en cas d'erreur. 
                                                         3. un flag pour signalé qu'il à fini la tache*/
+
+    this.jobService.jobsSubject.subscribe(data => {
+      console.log(data);
+      this.jobs = [data, ...this.jobs];
+    })
   }
 
 }
