@@ -1,4 +1,5 @@
 <div class ="panel-body">
+  <div class="container-fluid">
   <!-- formGroup permet d'afficher le formulaire de type group dans le fichier job-add-form.component.ts
         ngSubmit est le retour du formulaire lorsque l'utilisateur l'aura encodé voir job-add-component.ts pour voir le traitement de celui-ci dans la fonction createJob-->
   <form [formGroup]="form"(ngSubmit)="createJob(form.value)">
@@ -108,4 +109,5 @@
           </div>
       </div>
   </form>
+</div>
 </div>

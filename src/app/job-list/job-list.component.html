@@ -1,13 +1,16 @@
-
-<div class="panel panel-warning" *ngFor="let job of jobs">
-  <div class="panel-heading">
-    <h3 class="panel-title">{{ job.title }}</h3>
-    <div>{{ job.company }} - {{ job.city }} - {{ job.zipcode }}</div>
+<div class="row">
+  <div class="col">
+  <div class="card bd-callout-info " *ngFor="let job of jobs">
+    <div class="card-header bg-info">
+      <h3 class="panel-title">{{ job.title }}</h3>
+      <div class="font-weight-bold">{{ job.company }} - {{ job.city }} - {{ job.zipcode }}</div>
+    </div>
+    <div class="card-body">
+      {{ job.description }}
+    </div>
+    <div class="card-footer text-muted ">
+        parue il y a {{job.publishdate | daysAgo}}
+    </div>
   </div>
-  <div class="panel-body">
-    {{ job.description }}
-  </div>
-  <div class="panel-footer panel-warning clear">
-      parue il y a {{job.publishdate | daysAgo}}
   </div>
 </div>
