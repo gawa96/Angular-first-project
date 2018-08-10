@@ -16,7 +16,12 @@ export class JobService {
   jobsSubject = new Subject();
   constructor(private http:Http) { }
   //récuparation des jobs qui son dans le fichier jobs.json
-  getjobs(){    
+  getjobs(){
+    //on a à la fois des données de jobs.json + des données ajoutées par notre formulaire
+
+    //on a pas encore récupéré des donnée depuis jobs.json
+
+    // on a des jobs récupéré de jobs.json    
     return this.http.get('../../data/jobs.json')
             .pipe(map(res => res.json())) 
 
