@@ -67,6 +67,7 @@ export class JobAddFormComponent implements OnInit {
   }
   createJob(jobData){
     this.jobService.addJob(jobData).subscribe();
+    this.form.reset(); // permet après validation click du bouton remet à zéro le formulaire
   }
 
 }

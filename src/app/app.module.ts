@@ -16,6 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ToShortDatePipe } from './pipes/to-short-date.pipe';
+import { ToMoneySymbolPipe } from './pipes/to-money-symbol.pipe';
 
 
 
@@ -37,6 +39,8 @@ const routes =[
     HomeComponent,
     JobDetailsComponent,
     AboutComponent,
+    ToShortDatePipe,
+    ToMoneySymbolPipe,
   ],
   imports: [
     BrowserModule,

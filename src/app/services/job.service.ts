@@ -38,5 +38,9 @@ export class JobService {
                       this.jobsSubject.next(jobData);
                     }));
   }
-
+  //récupérer un job à l'aide d'un id
+  getJob(id){
+    return this.http.get (this.BASE_URL + `api/jobs/${id}`)
+                    .pipe(map(res=> res.json()));
+  }
 }

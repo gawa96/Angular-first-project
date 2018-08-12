@@ -2,7 +2,7 @@
   <div class="col">
   <div class="card bd-callout-info " *ngFor="let job of jobs">
     <div class="card-header bg-info">
-      <h3 class="panel-title">{{ job.title }}</h3>
+      <h3><a href="#" [routerLink]="['/jobs', job.id]" class="text-dark" >{{ job.title }}</a></h3>
       <div class="font-weight-bold">{{ job.company }} - {{ job.city }} - {{ job.zipcode }}</div>
     </div>
     <div class="card-body">
